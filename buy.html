@@ -10,7 +10,7 @@
 <body>
 
     <div class="page-header header">
-        <h1>购买原料</h1>
+        <h1>用户操作面板</h1>
     </div>
 
 
@@ -25,19 +25,19 @@
                     <table class="table">
                         <tr>
                             <td>现金</td>
-                            <td>1000万</td>
+                            <td><span class="money">1000</span>万元</td>
                         </tr>
                         <tr>
                             <td>原料</td>
-                            <td>100吨</td>
+                            <td><span class="resource">100</span>吨</td>
                         </tr>
                         <tr>
                             <td>功能卡</td>
-                            <td>5号</td>
+                            <td><span class="card1">5</span><span class="card2">，6</span>号 </td>
                         </tr>
                         <tr>
                             <td>产品库存</td>
-                            <td>20吨</td>
+                            <td><span class="prouct">20</span>吨</td>
                         </tr>
                     </table>
                 </div>
@@ -47,11 +47,16 @@
                 <div class="panel-heading">
                     <h2 class="panel-title">贷款情况</h2>
                 </div>
-                <div class="panel-body">
-                    <div class="debt">
-                        <p>借得A1公司XXX万元，第X轮后归还，利息为5%</p>
-                    </div>
-                </div>
+                    <ul class="debt list-group">
+                        <li class="list-group-item">
+                            借<span class="debtstatus1">得</span><span class="debter1">A1</span>公司<span class="debt1">1000</span>万元，
+                            第<span class="debtr1">2</span>轮后归还，利息为<span class="interest1">5</span>%
+                        </li>
+                        <li class="list-group-item">
+                            借<span class="debtstatus2">给</span><span class="debter2">A2</span>公司<span class="debt2">1000</span>万元，
+                            第<span class="debtr2">4</span>轮后归还，利息为<span class="interest2">5</span>%
+                        </li>
+                    </ul>
             </div>
 
             <div class="panel panel-primary">
@@ -62,50 +67,105 @@
                     <table class="table">
                         <tr>
                             <td>房地产行业</td>
-                            <td>1000万</td>
+                            <td><span class="f">1000</span>万元</td>
                         </tr>
                         <tr>
                             <td>新能源行业</td>
-                            <td>100吨</td>
+                            <td><span class="f">100</span>万元</td>
                         </tr>
                         <tr>
                             <td>医疗行业</td>
-                            <td>5号</td>
+                            <td><span class="f">100</span>万元</td>
                         </tr>
                         <tr>
                             <td>物流行业</td>
-                            <td>20吨</td>
+                            <td><span class="f">100</span>万元</td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-8 operation">
-            <div class="page-header">
-                <h2>操作区</h2>
-            </div>
+        <div class="col-md-8 operationzone">
 
-            <div>
-                <p>本轮原材料价格为XX元</p>
-                <form>
-                    <div class="form-group">
-                        <label>购买原料数量</label>
-                        <input type="text" class="resourceamount form-control" placeholder="0">   <!--此处提醒剩余的现金-->
-                        <p class="help-block">现金余额：<span class="moneyleft">100万</span></p>
-                        <p class="help-block">温馨提醒：请预留足够现金用于支付加工费、机器折旧费等。</p>
+                    <ul class="nav nav-tabs">
+                        <li role="presentation"  class="active"  id="tab01"><a href="#">投资</a></li>
+                        <li role="presentation" id="tab02"><a href="#">采购</a></li>
+                        <li role="presentation" id="tab03"><a href="#">生产</a></li>
+                    </ul>
+                    <div class="touzi">
+                        <br>
+                        <form>
+                            <div class="form-group">
+                                <div class="realestate">        <!--限制输入的最多一位小数-->
+                                    <label>房地产行业（单位：万元，下同）</label>
+                                    <input type="text" class="investamount form-control" placeholder="0">
+                                </div>
+                                <div class="newenergey">
+                                    <label>新能源行业</label>
+                                    <input type="text" class="investamount form-control" placeholder="0">
+                                </div>
+                                <div class="medicine">
+                                    <label>医疗行业</label>
+                                    <input type="text" class="investamount form-control" placeholder="0">
+                                </div>
+                                <div>
+                                    <label>物流行业</label>
+                                    <input type="text" class="investamount form-control" placeholder="0">
+                                </div>
+                                <p class="help-block">现金余额：<span class="moneyleft">100万</span></p> <!--余额为负购买失败-->
+
+                            </div>
+
+
+                            <div class="confirmbtn">
+                                <button class="btn" type="submit">确认购买</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="caigou"><br>
+                        <p>本轮原材料单价为<span class="price">1000</span>元</p>
+                        <form>
+                            <div class="form-group">
+                                <label>购买原料数量</label>
+                                <input type="text" class="resourceamount form-control" placeholder="0">   <!--此处提醒剩余的现金-->
+                                <p class="help-block">总价：<span class="totalpay">10</span>万元</p>
+                                <p class="help-block">现金余额：<span class="moneyleft">100</span>万元</p>
+                                <p class="help-block">温馨提醒：请预留足够现金用于支付加工费、机器折旧费等。</p>
+                            </div>
+
+                            <div class="confirmbtn">
+                                <button class="btn btn-primary" type="submit">确认购买</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="shengchan"><br>
+                        <form>
+                            <div class="form-group">
+                                <label>请输入生产数量</label>
+                                <input type="text" class="produceamount form-control" placeholder="0">
+                            </div>
+
+
+                            <!此处提醒剩余的现金->
+
+                            <div class="confirmbtn">
+                                <button class="btn" type="submit">确认生产</button>
+                            </div>
+                        </form>
                     </div>
 
-                    <div class="confirmbtn">
-                        <button class="btn" type="submit">确认购买</button>
-                    </div>
-
-                </form>
-            </div>
         </div>
 
-        <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    </div>
+        </div>
+
+
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="user.js"></script>
+
 </body>
 </html>

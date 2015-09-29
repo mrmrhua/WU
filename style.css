@@ -7,9 +7,7 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
 
 
 
-.operation {
-    #border: BLACK solid;
-    #background-color:rgb(143,4,1);
+.operationzone {
     position: relative;
     left: 50px;
     width:500px;
@@ -18,7 +16,7 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
 
 
 
-.moneyleft{
+.moneyleft, .totalpay{
     font-weight: bold;
     color: RED;
 }
@@ -29,6 +27,3 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
 }
 
 
-display: block;
-margin-left: auto;
-margin-right: auto;
